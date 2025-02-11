@@ -4,7 +4,7 @@
 Optimizing costs on AWS is crucial for managing cloud expenses efficiently. This project focuses on identifying and removing stale **Elastic Block Store (EBS) snapshots** that are no longer associated with any active EC2 instances, thereby reducing unnecessary storage costs.  
 
 ## Problem  
-Sometimes, developers create EC2 instances with volumes attached to them by default. For backup purposes, these developers also create snapshots. However, when they no longer need the EC2 instance and decide to terminate it, they sometimes forget to delete the snapshots created for backup. As a result, they continue to incur costs for these unused snapshots, even though they are not actively using them.  
+Sometimes, developers create EC2 instances with volumes attached to them by default. For backup purposes, these developers also create snapshots. However, when they no longer need the EC2 instance and decide to terminate it, they sometimes forget to delete the snapshots created for backup. As a result, they continue to be charged for these unused snapshots, even though they are not actively using them.  
 
 ## Solution  
 We're using AWS to save money on storage costs. We made a **smart Lambda function** that looks at our snapshots and EC2 instances. If Lambda finds a snapshot that isn't connected to any active EC2 instance, it **deletes it to save costs**. This helps us **optimize AWS storage expenses**.
