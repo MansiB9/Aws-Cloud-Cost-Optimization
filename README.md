@@ -1,4 +1,4 @@
-# Cost Optimization on AWS Cloud - Identifying Stale Resources  
+# AWS Cloud Cost Optimization - Identifying Stale Resources  
 
 ## Introduction  
 Optimizing costs on AWS is crucial for managing cloud expenses efficiently. This project focuses on identifying and removing stale **Elastic Block Store (EBS) snapshots** that are no longer associated with any active EC2 instances, thereby reducing unnecessary storage costs.  
